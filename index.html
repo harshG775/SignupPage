@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="https://www.theodinproject.com/assets/icons/odin-icon-b5b31c073f7417a257003166c98cc23743654715305910c068b93a3bf4d3065d.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <style>
+        @font-face {
+            src:url("Norse-Bold.otf");
+            font-family: odin-font;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        :root{
+            font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            font-weight: 400;
+
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+
+            --mainColor:#596D48;
+            --inputColor: rgb(240, 240, 240);
+        }
+        a,
+        ul {
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        .container {
+            display: flex;
+            /* min-height: 100vh; */
+            /* width: 100vw; */
+
+        }
+        section.left {
+            background-image: url("https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80");
+            background-attachment: fixed;
+            flex: 1 1 50%;
+            display: flex;
+            align-items: center;
+        }
+        .left .img {
+            background-color: #00000079;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 2rem 0;
+        }
+        .left .img img{
+            /* width: 100%; */
+            max-height: 100px;
+        }
+        .left .img h1{
+            font-family: odin-font;
+            font-size: 4rem;
+        }
+
+
+        section.right {
+            height: 100vh;
+            flex: 1 1 100%;
+            padding: 2rem 0;
+            background-color: #e2e2e275;
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+        }
+        .header {
+            padding: 2rem 4vw;
+        }
+        .header h4{
+            font-size: 1.2rem;
+            color: #333;
+            max-width: 55ch;
+        }
+        .header h4:nth-child(2){
+            padding: .75rem 0 1.25rem 0;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        section.right form ul{
+            background-color: white;
+            padding: 1rem 4vw;
+            display: grid;
+            grid-template-columns: repeat( 2,1fr);
+            grid-gap: 1rem;
+        }
+        section.right form ul li label{
+            font-weight: 600;
+            font-size: .8rem;
+            color: #333333;
+        }
+        section.right form ul li input{
+            padding: .8rem;
+        }
+
+        label,input {
+            display: block;
+            width: 100%;
+        }
+        input {
+            border: 2px solid #55555555;
+            border-radius: 5px;
+        }
+        input[type=password]:invalid {
+            border-color: rgba(255, 0, 0, 0.678);
+        }
+
+        input[type=password]:valid {
+            border-color: rgba(0, 128, 0, 0.555);
+        }
+
+        .submit {
+            padding: 2rem 4vw 4rem 4vw;
+        }
+        .submit button{
+            border: 2px solid var(--mainColor);
+            margin-bottom: .5rem;
+            padding: .6rem 1rem;
+            border-radius: 7px;
+            background-color: aliceblue;
+            color: var(--mainColor);
+
+            transition: .25s;
+        }
+        .submit button:hover {
+            background-color: white;
+            transform: translateY(-1px);
+        }
+        .submit button:active {
+            transform: translateY(-3px);
+        }
+        
+        .submit div {
+            padding-top: .5rem;
+        }
+        .submit div a{
+            color: var(--mainColor);
+            font-weight: 700;
+        }
+
+
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+        @media (max-width: 769px) {
+            section.right form ul{
+                grid-template-columns: repeat( 1,1fr);
+                /* grid-gap: 1rem; */
+            }
+        }
+
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="left">
+            <div class="img">
+                <img src="logo.svg" alt="">
+                <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png" alt="">
+                <h1>ODIN</h1>
+            </div>
+        </section>
+
+        <section class="right">
+            <div class="header">
+                <h4>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</h4>
+                <h4>You know you want to.</h4>
+            </div>
+
+            <form action="/">                    
+                    <ul class="inputs">
+                        <li><h2>Let&#39;s Do this</h2></li>
+                        <li></li>
+                        <li>
+                            <label for="Fname">FIRST NAME</label>
+                            <input type="text" id="Fname" placeholder="First Name..." required>
+                        </li>
+                        <li>
+                            <label for="Lname">LAST NAME</label>
+                            <input type="text" id="Lname" placeholder="Last Name...">
+                        </li>
+                        <li>
+                            <label for="Email">EMAIL</label>
+                            <input type="email" id="Email" placeholder="Email..." required>
+                        </li>
+                        <li>
+                            <label for="Number">NUMBER</label>
+                            <input type="tel" id="Number" placeholder="+91">
+                        </li>
+                        <li>
+                            <label for="pass">PASSWORD</label>
+                            <input type="password" id="pass" placeholder="Password" required title="Password should have at least one numerical digit(0-9). 8 to 15 characters. special character ( @, #, %, &, !, $, *)."  pattern="^(?=.*\d)(?=.*[@#%&!$*])[A-Za-z\d@#%&!$*]{8,15}$">
+                        </li>
+                        <li>
+                            <label for="Cpass">CONFIRM PASSWORD</label>
+                            <input type="password" id="Cpass" placeholder="Password" required title="Password should have at least one numerical digit(0-9). 8 to 15 characters. special character ( @, #, %, &, !, $, *)."  pattern="^(?=.*\d)(?=.*[@#%&!$*])[A-Za-z\d@#%&!$*]{8,15}$">
+                            <!-- <label for="peye"><i class="fa-regular fa-eye"></i></label> -->
+                            <!-- <input type="checkbox" name="" id="peye" placeholder="checkPass"> -->
+                        </li>
+                    </ul>
+                
+                <div class="submit">
+                    <a ><button type="submit">Create Account</button></a>
+                    <div>Already have an account? <a href="/login">Log in</a></div>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
